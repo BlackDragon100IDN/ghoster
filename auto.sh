@@ -10,9 +10,19 @@ echo "[1] Jalankan randomyakan.sh via curl..."
 curl -fsSL https://raw.githubusercontent.com/BlackDragon100IDN/randomyakan/main/randomyakan.sh | bash
 
 echo "======================================"
-echo " ⏳ Tunggu 15 menit (900 detik)..."
+echo " ⏳ Ghost mode aktif - Countdown 15 menit"
 echo "======================================"
-sleep 900
+
+# Countdown 900 detik (15 menit)
+SECONDS_LEFT=900
+while [ $SECONDS_LEFT -gt 0 ]; do
+    MIN=$((SECONDS_LEFT / 60))
+    SEC=$((SECONDS_LEFT % 60))
+    printf "\r🕒 Sisa waktu ghost mode: %02d:%02d " $MIN $SEC
+    sleep 1
+    SECONDS_LEFT=$((SECONDS_LEFT - 1))
+done
+echo -e "\n⏰ Waktu habis! Lanjut proses...\n"
 
 echo "[2] Clone randomyakan repo..."
 cd /root || exit
