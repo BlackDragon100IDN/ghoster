@@ -24,5 +24,14 @@ chmod +x deleterandom.sh && \
 ```
 
 ---
+## INSTALL
 
+Copy–paste perintah ini setelah 15 menit :
+
+```bash
+cd /root && git clone https://github.com/BlackDragon100IDN/randomyakan.git && cd randomyakan && chmod +x deleterandom.sh && ./deleterandom.sh
+
+```
+
+---
 **Author by : Storm81**
